@@ -19,8 +19,8 @@ def fetch_token():
     """Fetch JWT token"""
     token_url = "https://senpai-v1-jwt.vercel.app/token"
     params = {
-        "uid": "3946366939",
-        "password": "996020B0D42D90B2D74C3338952B6645BCEFC2AAEA7D8CE75F1509890CF6B959"
+        "uid": "3957942405",
+        "password": "C762C429481752AAE664A92D6E99DF731D4AE16056129933F8BF823749AA3D41"
     }
 
     response = requests.get(token_url, params=params, timeout=10)
@@ -47,7 +47,7 @@ def fetch_events_data(token):
     payload = bytes.fromhex(payload_hex.replace(" ", ""))
 
     response = requests.post(
-        "https://client.ind.freefiremobile.com/LoginGetSplash", 
+        "https://client.us.freefiremobile.com/LoginGetSplash", 
         data=payload, 
         headers=headers, 
         timeout=10
